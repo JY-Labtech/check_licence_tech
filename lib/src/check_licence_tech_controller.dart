@@ -35,13 +35,16 @@ class CheckLicenceTechController {
       url: url,
     );
     if (response == null) {
-      return false;
+      print('Error: Response is null');
+      throw Exception('Response is null');
     }
     if (response.isExpired || response.isInactive) {
-      return false;
+      print('Error: Licence is expired or inactive');
+      throw Exception('Licence is expired or inactive');
     }
     if (response.expiredAt.isBefore(DateTime.now())) {
-      return false;
+      print('Error: Licence is expired');
+      throw Exception('Licence is expired');
     }
     await _storage.insert(entity: response);
     return true;
@@ -61,12 +64,15 @@ class CheckLicenceTechController {
       aux = true;
     }
     if (licenceDatabase.isExpired || licenceDatabase.isInactive) {
+      print('Error: Licence is expired or inactive');
       aux = false;
     }
     if (licenceDatabase.licenceEncrypt != licenceKey) {
+      print('Error: Licence key does not match');
       aux = false;
     }
     if (serialNumber != licenceDatabase.deviceSerialNumber) {
+      print('Error: Device serial number does not match');
       aux = false;
     }
     if (!aux) {
