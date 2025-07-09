@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:check_licence_tech/src/domain/check_licence_entity.dart';
+import 'package:check_licence_tech/src/helper/string_helper.dart';
 
 class CheckLicenceProvider {
   CheckLicenceProvider._();
@@ -12,7 +13,8 @@ class CheckLicenceProvider {
     required String licenceKey,
     required String deviceSerialNumber,
   }) async {
-    final uri = Uri.parse(url);
+    final sanitizedUrl = StringHelper().sanitizeUrl(url);
+    final uri = Uri.parse(sanitizedUrl);
 
     final httpClient = HttpClient();
     try {
