@@ -1,3 +1,7 @@
+## 0.0.4
+
+- Add function to get serial number
+
 ## 0.0.3
 
 - Add throws to check licence

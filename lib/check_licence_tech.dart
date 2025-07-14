@@ -11,4 +11,8 @@ class CheckLicenceTech {
   }) async {
     return await _controller.checkLicence(licenceKey, url: url);
   }
+
+  Future<String> getSerialNumber() async {
+    return await _controller.getSerialNumber();
+  }
 }

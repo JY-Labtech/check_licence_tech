@@ -85,4 +85,13 @@ class CheckLicenceTechController {
 
     return true;
   }
+
+  Future<String> getSerialNumber() async {
+    try {
+      final serialNumber = await _device.getDeviceSerialNumber();
+      return serialNumber;
+    } catch (e) {
+      rethrow;
+    }
+  }
 }

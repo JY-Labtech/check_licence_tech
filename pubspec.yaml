@@ -1,6 +1,6 @@
 name: check_licence_tech
 description: "A Flutter package to check the license of a device using a license key and device serial number."
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/JY-Labtech/check_licence_tech
 
 environment:
