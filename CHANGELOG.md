@@ -1,3 +1,8 @@
+## 0.0.5
+
+- Add function to get serial number
+- Add final class
+
 ## 0.0.4
 
 - Add function to get serial number

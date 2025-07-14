@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-class StringHelper {
+final class StringHelper {
   String sanitizeUrl(String data) {
     if (data.contains('http')) {
       return data;

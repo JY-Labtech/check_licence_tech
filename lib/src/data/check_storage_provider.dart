@@ -2,7 +2,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../domain/check_licence_entity.dart';
 
-class CheckStorageProvider {
+final class CheckStorageProvider {
   CheckStorageProvider._internal();
   static final CheckStorageProvider _instance = CheckStorageProvider._internal();
   factory CheckStorageProvider() => _instance;

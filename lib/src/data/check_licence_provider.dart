@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:check_licence_tech/src/domain/check_licence_entity.dart';
 import 'package:check_licence_tech/src/helper/string_helper.dart';
 
-class CheckLicenceProvider {
+final class CheckLicenceProvider {
   CheckLicenceProvider._();
   factory CheckLicenceProvider() => CheckLicenceProvider._();
 

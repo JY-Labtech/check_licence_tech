@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:device_info_plus/device_info_plus.dart';
 
-class CheckDeviceProvider {
+final class CheckDeviceProvider {
   final _deviceInfo = DeviceInfoPlugin();
 
   Future<String> getDeviceUid() async {

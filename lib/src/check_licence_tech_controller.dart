@@ -3,7 +3,7 @@ import 'package:check_licence_tech/src/data/check_storage_provider.dart';
 
 import '../src/data/check_licence_provider.dart';
 
-class CheckLicenceTechController {
+final class CheckLicenceTechController {
   final _provider = CheckLicenceProvider();
   final _storage = CheckStorageProvider();
   final _device = CheckDeviceProvider();
