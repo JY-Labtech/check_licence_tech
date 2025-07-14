@@ -23,7 +23,7 @@ final class CheckLicenceProvider {
       // Headers
       request.headers.set(HttpHeaders.contentTypeHeader, 'application/json');
       if (licenceKey.isNotEmpty) {
-        request.headers.set(HttpHeaders.authorizationHeader, 'Bearer $licenceKey');
+        request.headers.set(HttpHeaders.authorizationHeader, 'Bearer licence:$licenceKey');
       }
 
       // Corpo da requisição

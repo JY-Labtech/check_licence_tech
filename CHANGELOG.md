@@ -1,3 +1,9 @@
+## 0.0.6
+
+- Add function to get serial number
+- Add final class
+- update client
+
 ## 0.0.5
 
 - Add function to get serial number
