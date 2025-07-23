@@ -1,3 +1,7 @@
+## 0.1.0
+
+- Fix checkLicence
+
 ## 0.0.6
 
 - Add function to get serial number

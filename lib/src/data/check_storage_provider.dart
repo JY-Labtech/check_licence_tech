@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../domain/check_licence_entity.dart';
@@ -24,6 +26,7 @@ final class CheckStorageProvider {
       if (json == null) return null;
       return CheckLicenceEntity.fromJson(json);
     } catch (e) {
+      log('Error retrieving licence from storage: $e');
       return null;
     }
   }

@@ -4,10 +4,9 @@ import 'package:check_licence_tech/src/check_licence_tech_controller.dart';
 
 final class CheckLicenceTech {
   final _controller = CheckLicenceTechController();
+  CheckLicenceTech._();
 
-  CheckLicenceTech._internal();
-  static final CheckLicenceTech _instance = CheckLicenceTech._internal();
-  factory CheckLicenceTech.instance() => _instance;
+  factory CheckLicenceTech.instance() => CheckLicenceTech._();
 
   Future<bool> checkLicence(
     String licenceKey, {

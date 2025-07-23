@@ -39,11 +39,9 @@ final class CheckLicenceProvider {
         final map = jsonDecode(responseBody) as Map<String, dynamic>;
         return CheckLicenceEntity.fromMap(map);
       } else {
-        print('Erro na requisição: ${response.statusCode}');
         return null;
       }
     } catch (e) {
-      print('Erro durante a requisição: $e');
       return null;
     } finally {
       httpClient.close();
