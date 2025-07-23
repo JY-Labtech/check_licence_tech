@@ -56,7 +56,7 @@ final class CheckLicenceEntity {
       'deviceSerialNumber': deviceSerialNumber,
       'licenceKey': licenceKey,
       'licenceEncrypt': licenceEncrypt,
-      'expiredAt': expiredAt.millisecondsSinceEpoch,
+      'expiredAt': expiredAt.toIso8601String(),
       'isExpired': isExpired,
       'isInactive': isInactive,
     };
@@ -64,15 +64,15 @@ final class CheckLicenceEntity {
 
   factory CheckLicenceEntity.fromMap(Map<String, dynamic> map) {
     return CheckLicenceEntity(
-      id: map['id'] as String,
-      uid: map['uid'] as String,
-      deviceUid: map['deviceUid'] as String,
-      deviceSerialNumber: map['deviceSerialNumber'] as String,
-      licenceKey: map['licenceKey'] as String,
-      licenceEncrypt: map['licenceEncrypt'] as String,
-      expiredAt: DateTime.fromMillisecondsSinceEpoch(map['expiredAt'] as int),
-      isExpired: map['isExpired'] as bool,
-      isInactive: map['isInactive'] as bool,
+      id: map['id'] as String? ?? '',
+      uid: map['uid'] as String? ?? '',
+      deviceUid: map['deviceUid'] as String? ?? '',
+      deviceSerialNumber: map['deviceSerialNumber'] as String? ?? '',
+      licenceKey: map['licenceKey'] as String? ?? '',
+      licenceEncrypt: map['licenceEncrypt'] as String? ?? '',
+      expiredAt: DateTime.tryParse(map['expiredAt']) ?? DateTime.now(),
+      isExpired: map['isExpired'] as bool? ?? false,
+      isInactive: map['isInactive'] as bool? ?? false,
     );
   }
 
