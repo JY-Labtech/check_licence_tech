@@ -1,3 +1,7 @@
+## 0.1.0+1
+
+- Remove print
+
 ## 0.1.0
 
 - Fix checkLicence

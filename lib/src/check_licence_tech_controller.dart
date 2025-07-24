@@ -61,7 +61,6 @@ final class CheckLicenceTechController {
   }) async {
     bool aux = false;
     final licenceDatabase = await _storage.getLicence();
-    log('*Licence from database2: ${licenceDatabase?.toJson()}');
     if (licenceDatabase == null) {
       return false;
     }
